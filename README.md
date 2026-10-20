@@ -6,9 +6,19 @@ A third-person, team-based castle warfare prototype built with Unreal Engine 5.8
 
 ## Source-only repository
 
-This repository contains C++ source, Unreal build rules, the project descriptor, shared configuration, and the screenshot above. Unreal assets (`Content/`), source art, compiled binaries, caches, generated files, local tools, and credentials are intentionally excluded.
+This repository contains C++ source, Unreal build rules, the project descriptor, shared configuration, and the reproducible BRIMBOUND character pipeline. The character source texture and preview images are included. Unreal assets (`Content/`), generated Blender/FBX files, compiled binaries, caches, local settings, and credentials are excluded.
 
 **The screenshot shows the complete local project. A fresh clone does not contain the maps, models, animations, materials, Blueprints, or class data needed to play.** Restore the corresponding `Content/` assets separately before launching a match. Git LFS is not required for this source snapshot.
+
+## Modular character source
+
+![BRIMBOUND Blender preview: eleven equipped character classes, each below 3,000 triangles](docs/images/characters.png)
+
+[Tools/CharacterPipeline](Tools/CharacterPipeline/README.md) contains the Blender source scripts, the anime expression source texture, and instructions to rebuild the editable scene, textures, modular FBX exports, and validation clips. The eleven equipped characters contain **1,780–2,748 triangles each**, including their weapons and headgear. They share a 26-bone rig and use four interchangeable painted anime expressions, with cylindrical cheeks and a pronounced chin; eyes and blush add no geometry.
+
+![Four painted anime expressions and front/profile views of the shaped head](docs/images/character-faces.png)
+
+These are Blender previews of the character kit. Importing this revision into the Unreal project, setting up materials, physics, and retargeting remains separate integration work. See the [character build and validation instructions](Tools/CharacterPipeline/README.md).
 
 ## Gameplay
 

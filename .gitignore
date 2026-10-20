@@ -17,10 +17,24 @@
 !Config/DefaultInput.ini
 !Config/DefaultEditor.ini
 
-# The README screenshot is the only binary included in Git.
+# README previews and the source texture needed to rebuild the characters.
 !docs/
 !docs/images/
 !docs/images/gameplay.png
+!docs/images/characters.png
+!docs/images/character-faces.png
+
+!Tools/
+!Tools/CharacterPipeline/
+!Tools/CharacterPipeline/README.md
+!Tools/CharacterPipeline/scripts/
+!Tools/CharacterPipeline/scripts/build_brimbound_lowpoly.py
+!Tools/CharacterPipeline/scripts/export_lowpoly.py
+!Tools/CharacterPipeline/scripts/roundtrip_lowpoly.py
+!Tools/CharacterPipeline/scripts/finalize_lowpoly.py
+!Tools/CharacterPipeline/textures/
+!Tools/CharacterPipeline/textures/Anime_Expressions.png
+!Tools/CharacterPipeline/textures/face_generation_prompts.json
 
 # Never publish credentials, even beneath an allowed directory.
 **/.env
@@ -33,6 +47,9 @@
 **/*.pfx
 **/credentials*
 **/secrets.*
+**/id_rsa*
+**/id_ed25519*
+**/id_github*
 
 # Content, SourceAssets, Saved, Intermediate, Binaries, DerivedDataCache,
-# Scripts, IDE state, local editor preferences and generated solutions are omitted.
+# generated Blender/FBX output, archives, logs, IDE state and local settings are omitted.
