@@ -1,0 +1,38 @@
+# Source-only repository. New files stay private unless explicitly allowed here.
+*
+!.gitignore
+!.gitattributes
+!README.md
+!CastleCTF.uproject
+
+!Source/
+!Source/**/
+!Source/**/*.cpp
+!Source/**/*.h
+!Source/**/*.cs
+
+!Config/
+!Config/DefaultEngine.ini
+!Config/DefaultGame.ini
+!Config/DefaultInput.ini
+!Config/DefaultEditor.ini
+
+# The README screenshot is the only binary included in Git.
+!docs/
+!docs/images/
+!docs/images/gameplay.png
+
+# Never publish credentials, even beneath an allowed directory.
+**/.env
+**/.env.*
+**/.ssh/
+**/.aws/
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/credentials*
+**/secrets.*
+
+# Content, SourceAssets, Saved, Intermediate, Binaries, DerivedDataCache,
+# Scripts, IDE state, local editor preferences and generated solutions are omitted.
